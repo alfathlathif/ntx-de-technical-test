@@ -11,6 +11,10 @@ async def predict(text: str) -> int:
 
     return result
 
+# Endpoint for health check
+@app.get("/health")
+async def health_check():
+    return {"status": "API is healthy"}
 
 if __name__ == "__main__":
     import uvicorn
