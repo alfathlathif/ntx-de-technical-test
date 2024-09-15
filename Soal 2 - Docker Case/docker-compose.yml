@@ -1,2 +1,28 @@
 version: "3"
 services:
+  etl:
+    container_name: etl
+    # Build an image based on the Dockerfile located in the `etl` folder
+    build:
+      context: ./etl
+    # Mount the file located at `./etl/etl.py` on the local computer into the ETL container at `/app/etl.py`. This way, any changes made to one will automatically reflect on the other
+    volumes:
+      - ./etl/etl.py:/app/etl.py
+    # Ensure that the ETL container will only run when the API container is in a healthy state.
+    depends_on:
+      api:
+        condition: service_healthy
+        
+  api:
+    container_name: api
+    # Build an image based on the Dockerfile located in the `api` folder
+    build:
+      context: ./api
+    # Mount the file located at `./api/api.py` on the local computer into the ETL container at `/app/api.py`. This way, any changes made to one will automatically reflect on the other
+    volumes:
+      - ./api/api.py:/app/api.py
+    # Command to perform a health check for the API container by making a request to the /health endpoint. The request process will be repeated 5 times with a 10-second interval.
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:6000/health"]
+      interval: 10s
+      retries: 5
