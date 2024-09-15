@@ -1,3 +1,6 @@
+## Answer
+To resolve the three given cases, the SQL syntax used can be found in the answer.sql file, along with some explanations
+
 ## Context
 For this challenge, you're provided with a CSV dataset sourced from `data-to-insights.ecommerce.all_sessions` in "Soal 1 - Data Transformation and Analysis Case". Your task is to import this dataset into your preferred SQL environment and perform a series of analyses. This challenge aims to assess your capabilities in data ingestion, transformation, and SQL-based analysis.
 
