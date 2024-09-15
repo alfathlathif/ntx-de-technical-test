@@ -1,3 +1,7 @@
+# Answer
+* Transformed data processed by ChatGPT is in the 'ChatGPT result' folder
+* Explanation regarding the code link, prompt, analysis, and improvement can be found in the file 'Prompt and Analysis.pdf'
+
 # Data Transformation Case
 As part of data team in NTX Solution, we deal with different kinds of data on a daily basis. We are responsible for various data acquisition and processing method in order to provide the best solution for our clients.
 
