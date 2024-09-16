@@ -1,3 +1,8 @@
+# Answer
+* The code used for scraping is in the file scripts.py.
+* The scraping results can be found in the datasets folder.
+* I encountered issues with frequent timeouts during scraping, so I used a VPN. It seems the website considers my computer as a bot.
+
 # Data Collection Challenge for DE Technical Test
 
 ## Context
