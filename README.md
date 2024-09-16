@@ -1,3 +1,6 @@
+# Answer
+Each answer to the given questions can be found in the respective folder
+
 # NTX Data Engineer Technical Assessment Guidelines
 
 ---

@@ -1,3 +1,6 @@
+## Answer
+In completing the task, several changes were made to the docker-compose.yaml file, the etl folder, and the api folder. There is also visual evidence showing that the code has been successfully executed
+
 ## Context
 At NTX, we are highly reliant on Docker. It feels like our lives, especially as Data Engineers, revolve around it.
 
