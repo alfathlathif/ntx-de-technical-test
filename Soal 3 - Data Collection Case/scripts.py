@@ -6,8 +6,8 @@ from tqdm.asyncio import tqdm_asyncio
 import json
 import os
 
-# Set max_pages sesuai instruksi
-max_pages = [20, 20, 20, 20, 30]
+# Set max_pages 
+max_pages = [20, 20, 20, 20, 20]
 
 # Create datasets directory if not exists
 os.makedirs("datasets", exist_ok=True)
@@ -74,7 +74,7 @@ async def scrape_level(level, max_page):
             data = parse_html(html)
             all_data.extend(data)
         else:
-            print(f"Page {page} at level {level} was skipped")  # Log halaman yang dilewati
+            print(f"Page {page} at level {level} was skipped")  
             skipped_pages.append(page)
 
     # Save the data to a CSV file
@@ -98,7 +98,6 @@ def save_skipped_pages(skipped):
 
     skipped_data.update(skipped)
 
-    # Log sebelum menyimpan
     print(f"Saving skipped pages: {skipped_data}")
 
     with open(skipped_path, 'w') as f:
